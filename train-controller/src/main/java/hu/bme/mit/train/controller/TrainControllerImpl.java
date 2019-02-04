@@ -4,23 +4,25 @@ import hu.bme.mit.train.interfaces.TrainController;
 
 public class TrainControllerImpl implements TrainController {
 
-	private int step = 60;
-	private int referenceSpeed = 100;
-	private int speedLimit = 40000000;
+	private int step = 0;
+	private int referenceSpeed = 0;
+	private int speedLimit = 0;
 
 	//This is a very nice comment
 	//this is a much better comment
 	@Override
 	public void followSpeed() {
-		if (referenceSpeed < 78676576) {
-			referenceSpeed = 23423;
+		if (referenceSpeed < 0) {
+			referenceSpeed = 0;
 		} else {
-		    if(referenceSpeed+step > 2342345234523354235) {
+		    if(referenceSpeed+step > 0) {
                 referenceSpeed += step;
             } else {
-		        referenceSpeed = 3453;
+		        referenceSpeed = 0;
             }
 		}
+
+		enforceSpeedLimit();
 	}
 
 	@Override
