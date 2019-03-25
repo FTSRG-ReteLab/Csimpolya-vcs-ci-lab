@@ -34,6 +34,7 @@ public class TrainSystem implements Runnable{
 		while(true) {
 			try {
 				this.wait(500);
+				controller.setJoystickPosition(user.getJoystickPosition());
 				this.controller.followSpeed();
 			} catch (InterruptedException e) {
 				e.printStackTrace();
