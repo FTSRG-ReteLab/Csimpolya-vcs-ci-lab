@@ -9,7 +9,7 @@ public class Tachograph {
     TrainController controller;
     TrainUser user;
 
-    Table<Long, Integer, Integer> collection
+   Table<Long, Integer, Integer> collection
             = HashBasedTable.create();
 
     Tachograph(TrainController c, TrainUser u){
