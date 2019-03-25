@@ -24,5 +24,12 @@ public class TrainSystem {
 	public TrainUser getUser() {
 		return user;
 	}
+	
+	public void run() {
+		while(true) {
+			controller.setJoystickPosition(user.getJoystickPosition());
+			controller.followSpeed();
+		}
+	}
 
 }
