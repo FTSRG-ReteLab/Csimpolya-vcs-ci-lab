@@ -27,6 +27,7 @@ public class TrainSystem {
 	
 	public void run() {
 		while(true) {
+			//asda
 			controller.setJoystickPosition(user.getJoystickPosition());
 			controller.followSpeed();
 		}
